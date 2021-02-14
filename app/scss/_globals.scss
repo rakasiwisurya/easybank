@@ -17,10 +17,22 @@ body {
     font-weight: 300;
     color: $grayishBlue;
     line-height: 1.3;
+
+    &.noscroll {
+        overflow: hidden;
+    }
 }
 
-a, a:visited, a:hover {
+a,
+a:visited,
+a:hover {
     text-decoration: none;
+}
+
+// Spacing
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 // Flexbox
@@ -41,7 +53,8 @@ a, a:visited, a:hover {
 }
 
 // Button
-button, .button {
+button,
+.button {
     padding: 0.875rem 2.1875rem;
     background: linear-gradient(to right, $limeGreen, $brightCyan);
     border: 0;
@@ -53,13 +66,13 @@ button, .button {
 
 // Visibility
 .hide-for-mobile {
-    @include breakpoints-down(medium){
+    @include breakpoints-down(medium) {
         display: none;
     }
 }
 
 .hide-for-desktop {
-    @include breakpoints-up(large){
+    @include breakpoints-up(large) {
         display: none;
     }
 }
